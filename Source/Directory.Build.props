@@ -1,6 +1,9 @@
 <Project>
-    <PropertyGroup>
-        <AvaloniaVersion>11.0.0</AvaloniaVersion>
-        <OxyPlotCoreVersion>2.1.2</OxyPlotCoreVersion>
-    </PropertyGroup>
+  <!-- iPlus settings and overrides -->
+  <Import Project="../../iPlus/build/Avalonia.Build.props" />
+  <!-- End iPlus settings and overrides -->
+  <PropertyGroup>
+    <AvaloniaVersion Condition="'$(AvaloniaVersion)' == ''">11.3.8</AvaloniaVersion>
+    <OxyPlotCoreVersion Condition="'$(OxyPlotCoreVersion)' == ''">2.1.2</OxyPlotCoreVersion>
+  </PropertyGroup>
 </Project>

@@ -1,0 +1,19 @@
+<Project>
+  <!-- iPlus settings and overrides -->
+  <Import Condition="'$(UseAvaloniaFork)' == 'True'" Project="../../iPlus/Directory.Packages.props" />
+  <!-- End iPlus settings and overrides -->
+
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <!--<ManagePackageVersionsCentrally Condition="'$(UseAvaloniaFork)' == 'False'">true</ManagePackageVersionsCentrally>-->
+  </PropertyGroup>
+  
+  <ItemGroup Condition="'$(UseAvaloniaFork)' == 'False'">
+    <PackageVersion Include="Avalonia" Version="$(AvaloniaVersion)" />
+    <PackageVersion Include="OxyPlot.Core" Version="$(OxyPlotCoreVersion)" />
+    <PackageVersion Include="OxyPlot.ExampleLibrary" Version="$(OxyPlotCoreVersion)" />
+    <PackageVersion Include="Serilog.Sinks.Trace" Version="2.1.0" />
+    <PackageVersion Include="JetBrains.Annotations" Version="11.0.0" />
+  </ItemGroup>
+
+</Project>
