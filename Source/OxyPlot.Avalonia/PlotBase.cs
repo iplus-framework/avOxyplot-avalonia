@@ -367,7 +367,9 @@ namespace OxyPlot.Avalonia
         {
             if (TopLevel.GetTopLevel(this) is { Clipboard: { } clipboard })
             {
-                await clipboard.SetTextAsync(text).ConfigureAwait(true);
+                var dataTransfer = new DataTransfer();
+                dataTransfer.Add(DataTransferItem.CreateText(text));
+                await clipboard.SetDataAsync(dataTransfer).ConfigureAwait(true);
             }
         }
 

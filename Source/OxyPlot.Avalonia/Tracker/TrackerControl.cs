@@ -57,11 +57,6 @@ namespace OxyPlot.Avalonia
         public static readonly StyledProperty<bool> ShowPointerProperty = AvaloniaProperty.Register<TrackerControl, bool>(nameof(ShowPointer), true);
 
         /// <summary>
-        /// Identifies the <see cref="CornerRadius"/> dependency property.
-        /// </summary>
-        public static readonly StyledProperty<double> CornerRadiusProperty = AvaloniaProperty.Register<TrackerControl, double>(nameof(CornerRadius), 0.0);
-
-        /// <summary>
         /// Identifies the <see cref="Distance"/> dependency property.
         /// </summary>
         public static readonly StyledProperty<double> DistanceProperty = AvaloniaProperty.Register<TrackerControl, double>(nameof(Distance), 7.0);
@@ -236,21 +231,6 @@ namespace OxyPlot.Avalonia
             }
         }
 
-        /// <summary>
-        /// Gets or sets the corner radius (only used when ShowPoint=<c>false</c>).
-        /// </summary>
-        public double CornerRadius
-        {
-            get
-            {
-                return GetValue(CornerRadiusProperty);
-            }
-
-            set
-            {
-                SetValue(CornerRadiusProperty, value);
-            }
-        }
 
         /// <summary>
         /// Gets or sets the distance of the content container from the trackers Position.

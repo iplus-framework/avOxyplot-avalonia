@@ -25,11 +25,6 @@ namespace OxyPlot.Avalonia
         public static readonly StyledProperty<double[]> Dashes2Property = AvaloniaProperty.Register<TwoColorAreaSeries, double[]>(nameof(Dashes2));
 
         /// <summary>
-        /// Identifies the <see cref="Fill"/> dependency property.
-        /// </summary>
-        public static readonly StyledProperty<Color> FillProperty = AvaloniaProperty.Register<TwoColorAreaSeries, Color>(nameof(Fill), MoreColors.Automatic);
-
-        /// <summary>
         /// Identifies the <see cref="Fill2"/> dependency property.
         /// </summary>
         public static readonly StyledProperty<Color> Fill2Property = AvaloniaProperty.Register<TwoColorAreaSeries, Color>(nameof(Fill2), MoreColors.Automatic);
@@ -74,22 +69,6 @@ namespace OxyPlot.Avalonia
             set
             {
                 SetValue(Dashes2Property, value);
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets Fill above the limit line.
-        /// </summary>
-        public Color Fill
-        {
-            get
-            {
-                return GetValue(FillProperty);
-            }
-
-            set
-            {
-                SetValue(FillProperty, value);
             }
         }
 
